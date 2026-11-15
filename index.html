@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Demo de un catálogo sencillo de libros con búsqueda y datos guardados localmente.">
+    <title>Biblioteca personal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./">Biblioteca personal</a>
+      <span>Demo educativa</span>
+    </header>
+    <main>
+      <p class="eyebrow">Colección</p>
+      <h1>Libros que quiero guardar.</h1>
+      <p class="intro">Agrega un título a tu lista o encuentra uno que ya registraste.</p>
+      <section class="panel">
+        <form id="book-form">
+          <label for="title">Título del libro</label>
+          <div class="form-row">
+            <input id="title" name="title" type="text" maxlength="80" placeholder="Ej. El principito" required>
+            <input id="author" name="author" type="text" maxlength="60" placeholder="Autor" required>
+            <button type="submit">Agregar</button>
+          </div>
+        </form>
+        <div class="list-heading">
+          <h2>Mi lista</h2>
+          <span id="book-count"></span>
+        </div>
+        <label class="sr-only" for="search">Buscar libros</label>
+        <input id="search" class="search" type="search" placeholder="Buscar por título o autor">
+        <p id="message" class="message" role="status"></p>
+        <ul id="book-list" class="book-list"></ul>
+      </section>
+      <p class="note">Los libros se guardan en este navegador. <a href="https://github.com/danielagutierrez-g/libreriaEstructura" target="_blank" rel="noreferrer">Ver repositorio de referencia</a>.</p>
+    </main>
+    <footer>Demo de catálogo · Daniela</footer>
+  </body>
+</html>
